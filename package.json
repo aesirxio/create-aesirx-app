@@ -5,12 +5,17 @@
     "aesirx"
   ],
   "description": "Create AesirX apps with one command.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aesirxio/create-aesirx-app"
+  },
+  "author": "AesirX",
   "license": "MIT",
   "engines": {
     "node": ">=14"
   },
   "bugs": {
-    "url": "https://github.com/aesirxio/dma-app"
+    "url": "https://github.com/aesirxio/create-aesirx-app/issues"
   },
   "files": [
     "index.js",
