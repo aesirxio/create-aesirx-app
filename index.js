@@ -32,7 +32,7 @@ async function run() {
     {
       type: "select",
       name: "app",
-      message: "What Aesix App do you want?",
+      message: "What AesirX App do you want?",
       choices: [{ title: "AesirX DMA", value: "AesirX DMA" }],
       initial: 0,
     },
