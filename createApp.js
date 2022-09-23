@@ -19,7 +19,7 @@ async function createApp(res) {
 
   switch (res.app) {
     case "AesirX DMA":
-      execSync(`git clone https://github.com/aesirxio/dma-app ${root}`, {
+      execSync(`git clone https://github.com/aesirxio/dma-app ${res.path}`, {
         stdio: "ignore",
       });
       break;
@@ -56,6 +56,8 @@ REACT_APP_TEST_MODE=${res.test}`;
     console.log(
       `cd ${chalk.green(res.path)} and ${chalk.green(`npm run start`)}`
     );
+
+    process.exit(1);
   });
 
   console.log();
