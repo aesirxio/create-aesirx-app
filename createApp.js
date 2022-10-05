@@ -19,9 +19,21 @@ async function createApp(res) {
 
   switch (res.app) {
     case "AesirX DMA":
-      execSync(`git clone https://github.com/aesirxio/dma-app ${res.path}`, {
-        stdio: "ignore",
-      });
+      execSync(
+        `git clone -b master https://github.com/aesirxio/dma-app ${res.path}`,
+        {
+          stdio: "ignore",
+        }
+      );
+      break;
+
+    case "AesirX DAM":
+      execSync(
+        `git clone -b master https://github.com/aesirxio/dam-app ${res.path}`,
+        {
+          stdio: "ignore",
+        }
+      );
       break;
 
     default:
@@ -30,7 +42,7 @@ async function createApp(res) {
 
   const env = `REACT_APP_CLIENT_ID=app
 REACT_APP_CLIENT_SECRET=${res.client_secret}
-REACT_APP_ENDPOINT_URL=https://api.r.redweb.digital
+REACT_APP_ENDPOINT_URL=https://api.aesirx.io
 REACT_APP_WEBSOCKET_ENDPOINT=https://ws.r.redweb.digital
 REACT_APP_ENCRYPT=encrypt
 REACT_APP_LICENSE=${res.license}
